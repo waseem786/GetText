@@ -2,12 +2,17 @@ package com.wsm.gettext
 
 import android.Manifest
 import android.app.Activity
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.net.Uri
+import android.opengl.Visibility
 import android.os.Bundle
 import android.provider.MediaStore
+import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
@@ -81,6 +86,10 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        binding.ivCopy.setOnClickListener {
+            copyTextToClipboard()
+        }
+
         if (!checkPermission()) {
             requestPermission()
         }
@@ -118,10 +127,20 @@ class MainActivity : AppCompatActivity() {
             .addOnSuccessListener { visionText ->
                 val resultText = visionText.text
                 binding.tvContent.text = resultText
+                binding.ivCopy.visibility = View.VISIBLE
             }
             .addOnFailureListener { e ->
                 binding.tvContent.text = "Failed to recognize text: ${e.localizedMessage}"
+                binding.ivCopy.visibility = View.GONE
             }
+    }
+
+    private fun copyTextToClipboard() {
+        val textToCopy = binding.tvContent.text
+        val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        val clipData = ClipData.newPlainText("text", textToCopy)
+        clipboardManager.setPrimaryClip(clipData)
+        Toast.makeText(this, "Text copied to clipboard", Toast.LENGTH_LONG).show()
     }
 
     private fun requestPermission() {
