@@ -3,8 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Out-source apps/GetText Root/GetText/app/src/main/res/layout/activity_main.xml" value="0.2191780821917808" />
+        <entry key="..\:/Out-source apps/GetText Root/GetText/app/src/main/res/drawable-v24/add-48px.xml" value="0.1535" />
+        <entry key="..\:/Out-source apps/GetText Root/GetText/app/src/main/res/drawable/add-48px.xml" value="0.1535" />
+        <entry key="..\:/Out-source apps/GetText Root/GetText/app/src/main/res/drawable/icon_add.xml" value="0.1535" />
+        <entry key="..\:/Out-source apps/GetText Root/GetText/app/src/main/res/drawable/icon_file_searching.xml" value="0.1535" />
+        <entry key="..\:/Out-source apps/GetText Root/GetText/app/src/main/res/drawable/rounded_corner.xml" value="0.1535" />
+        <entry key="..\:/Out-source apps/GetText Root/GetText/app/src/main/res/layout/activity_detail.xml" value="0.2222222222222222" />
+        <entry key="..\:/Out-source apps/GetText Root/GetText/app/src/main/res/layout/activity_main.xml" value="0.20253164556962025" />
+        <entry key="..\:/Out-source apps/GetText Root/GetText/app/src/main/res/layout/bottom_sheet_file_selector.xml" value="0.20512820512820512" />
+        <entry key="..\:/Out-source apps/GetText Root/GetText/app/src/main/res/layout/bottom_sheet_window.xml" value="0.2212962962962963" />
         <entry key="..\:/Out-source apps/GetText/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
+        <entry key="..\:/Software Installation/Android SDKs/platforms/android-32/data/res/drawable/btn_plus.xml" value="0.1535" />
         <entry key="..\:/Software Installation/Android SDKs/platforms/android-32/data/res/drawable/stat_sys_upload.xml" value="0.1615" />
       </map>
     </option>

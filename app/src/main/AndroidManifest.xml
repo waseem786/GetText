@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.wsm.gettext">
 
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -19,6 +18,9 @@
         android:theme="@style/Theme.GetText"
         tools:targetApi="31">
         <activity
+            android:name=".DetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -26,14 +28,14 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!--        You can configure your app to automatically download the ML model to the device after your app is installed from the Play Store.-->
+        </activity> <!-- You can configure your app to automatically download the ML model to the device after your app is installed from the Play Store. -->
         <meta-data
             android:name="com.google.mlkit.vision.DEPENDENCIES"
             android:value="ocr" />
-        <!-- To use multiple models: android:value="ocr,model2,model3" -->
-
+        <!--View log messages for performance events-->
+<!--        <meta-data-->
+<!--            android:name="firebase_performance_logcat_enabled"-->
+<!--            android:value="true" />-->
     </application>
 
 </manifest>
